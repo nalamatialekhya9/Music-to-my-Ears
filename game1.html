@@ -1,0 +1,254 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Find the Differences</title>
+    </head>
+    <body>
+        <style>
+            .position001
+            {
+                position: relative;
+            }
+            .block001
+            {
+            /*    position: absolute;
+                left: 620px;
+                right: 109px;*/
+            }
+            .block002
+            {
+                position: absolute;
+                top: 11px;
+                right: 64px;
+            }
+            .block003
+            {
+                position: absolute;
+                top: 265px;
+                left: 180px;
+            }
+            .block004
+            {
+                position: absolute;
+                top: 167px;
+                right: 221px;
+            }
+            .block005
+            {
+                position: absolute;
+                top: 110px;
+                right: 320px;
+            }
+            .block006
+            {
+                position: absolute;
+                top: 125px;
+                right: 290px;
+            }
+            /*.button001
+            {
+                background-color: transparent;
+                border: 1px solid transparent;
+                width: 50px;
+                height: 5px;
+            }
+            .button002
+            {
+                background-color: transparent;
+                border: 1px solid transparent;
+                width: 20px;
+                height: 25px;
+            }
+            .button003
+            {
+                background-color: transparent;
+                border: 1px solid transparent;
+                width: 90px;
+                height: 10px;
+            }
+            .button004
+            {
+                background-color: transparent;
+                border: 1px solid transparent;
+                width: 90px;
+                height: 30px;
+            }
+            .button005
+            {
+                background-color: transparent;
+                border: 1px solid transparent;
+                width: 90px;
+                height: 30px;
+            }
+            .button006
+            {
+                background-color: transparent;
+                border: 1px solid transparent;
+                width: 90px;
+                height: 40px;
+            }*/
+            .hide001
+            {
+                background-color: white;
+                border: 1px solid white;
+            }
+            #mark001
+            {
+                color: yellow;
+                font-size: 125%;
+            }
+            .blue001
+            {
+                background-color: purple;
+                border: none;
+                color: white;
+                padding: 7px 17px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 2px 2px;
+                border-radius: 9px;
+                cursor: pointer;
+                width: 178px;
+            }
+        </style>
+            <h2>Find the Differences</h2>
+            Items:<text id="score001">0</text><br>
+            Attempts:<text id="attempts001">6</text><br><br>
+        <div class="position001">
+            <div id="board001">
+                <button class="hide001" onclick="incorrect001()"> <!--executes a script when the button is clicked-->
+                    <img src="https://orig00.deviantart.net/4d60/f/2017/297/d/d/btsss_by_kamjong_kai-dbrkt4i.jpg" />
+                </button>
+
+                <div class="block001" id="block1">
+                    <div id="disappear001">
+                        <button class="button001" onclick="correct001()"></button>
+                    </div>
+                </div>
+
+                <div class="block002">
+                    <div id="disappear002">
+                        <button class="button002" onclick="correct002()"></button>
+                    </div>
+                </div>
+
+                <div class="block003">
+                    <div id="disappear003">
+                        <button class="button003" onclick="correct003()"></button>
+                    </div>
+                </div>
+                <div class="block004">
+                    <div id="disappear004">
+                        <button class="button004" onclick="correct004()"></button>
+                    </div>
+                </div>
+                <div class="block005">
+                    <div id="disappear005">
+                        <button class="button005" onclick="correct005()"></button>
+                    </div>
+                </div>
+                <div class="block006">
+                    <div id="disappear006">
+                        <button class="button006" onclick="correct006()"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br >
+        <p id="message001"></p><!--id is to point to a style in a style sheet and by JS(HTML DOM) to manipulate the element with the specific id-->
+        <p id="message002"></p>
+
+        <script>        /* to define a client-side script*/
+            var a = 0;
+            a++
+            var b = 6;
+            b--;
+            block1.innerHTML="<area shape='rect' coords='627,112,666,113'/>";
+            /*innerHTML that allows JS code to manipulate a website being displayed*/
+            function correct001()
+            {
+                disappear001.innerHTML = "<div id=mark001><strong>&#9711</strong></div>";
+                score001.innerHTML = a++;
+                if (a > 6)
+                {
+                    message001.innerHTML = "Congratulations. You won.";
+                    message002.innerHTML = "<button class=blue001 onclick=repeat001()>Repeat</button>";
+                    board001.innerHTML = "<img src=https://orig00.deviantart.net/4d60/f/2017/297/d/d/btsss_by_kamjong_kai-dbrkt4i.jpg  />";
+                }
+            }
+            function correct002()
+            {
+                disappear002.innerHTML = "<div id=mark001><strong>&#9711</strong></div>";
+                score001.innerHTML = a++;
+                if (a > 6)
+                    {
+                        message001.innerHTML = "Congratulations. You won.";
+                        message002.innerHTML = "<button class=blue001 onclick=repeat001()>Repeat</button>";
+                        board001.innerHTML = "<img src=https://orig00.deviantart.net/4d60/f/2017/297/d/d/btsss_by_kamjong_kai-dbrkt4i.jpg  />";
+                    }
+            }
+            function correct003()
+            {
+                disappear003.innerHTML = "<div id=mark001><strong>&#9711</strong></div>";
+                score001.innerHTML = a++;
+                if (a > 6)
+                 {
+                    message001.innerHTML = "Congratulations. You won.";
+                    message002.innerHTML = "<button class=blue001 onclick=repeat001()>Repeat</button>";
+                    board001.innerHTML = "<img src=https://orig00.deviantart.net/4d60/f/2017/297/d/d/btsss_by_kamjong_kai-dbrkt4i.jpg/>";
+                 }
+            }
+            function correct004()
+            {
+                disappear004.innerHTML = "<div id=mark001><strong>&#9711</strong></div>";
+                score001.innerHTML = a++;
+                if (a > 6)
+                {
+                    message001.innerHTML = "Congratulations. You won.";
+                    message002.innerHTML = "<button class=blue001 onclick=repeat001()>Repeat</button>";
+                    board001.innerHTML = "<img src=https://orig00.deviantart.net/4d60/f/2017/297/d/d/btsss_by_kamjong_kai-dbrkt4i.jpg />";
+                }
+            }
+            function correct005()
+            {
+                disappear005.innerHTML = "<div id=mark001><strong>&#9711</strong></div>";
+                score001.innerHTML = a++;
+                if (a > 6)
+                {
+                    message001.innerHTML = "Congratulations. You won.";
+                    message002.innerHTML = "<button class=blue001 onclick=repeat001()>Repeat</button>";
+                    board001.innerHTML = "<img src=https://orig00.deviantart.net/4d60/f/2017/297/d/d/btsss_by_kamjong_kai-dbrkt4i.jpg />";
+                }
+            }
+            function correct006()
+            {
+                disappear006.innerHTML = "<div id=mark001><strong>&#9711</strong></div>";
+                score001.innerHTML = a++;
+                if (a > 6)
+                {
+                    message001.innerHTML = "Congratulations. You won.";
+                    message002.innerHTML = "<button class=blue001 onclick=repeat001()>Repeat</button>";
+                    board001.innerHTML = "<img src=https://orig00.deviantart.net/4d60/f/2017/297/d/d/btsss_by_kamjong_kai-dbrkt4i.jpg />";
+                }
+            }
+
+            function incorrect001()
+            {
+                attempts001.innerHTML = b--;
+                if (b < 0)
+                {
+                    message001.innerHTML = "You lost.";
+                    message002.innerHTML = "<button class=blue001 onclick=repeat001()>Repeat</button>";
+                    attempts001.innerHTML = "0";
+                    board001.innerHTML = "<img src=https://orig00.deviantart.net/4d60/f/2017/297/d/d/btsss_by_kamjong_kai-dbrkt4i.jpg  />";
+                }
+            }
+            function repeat001()
+            {
+                location.reload();  /*reload the current document(similar to refresh button in browser)*/
+            }
+        </script>
+    </body>
+</html>
